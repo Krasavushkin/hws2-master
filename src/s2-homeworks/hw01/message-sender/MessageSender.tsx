@@ -4,6 +4,7 @@ import s from './MessageSender.module.css'
 
 // компонента, которая тестирует вашу компоненту (не изменять, any не трогать)
 const MessageSender = (props: any) => {
+
     const M = props.M
     const textareaRef = useRef<HTMLTextAreaElement | null>(null);
     const [messages, setMessages] = useState<any[]>([])
@@ -38,7 +39,7 @@ const MessageSender = (props: any) => {
     const onKeyDown = (e: any) => {
         e.key === 'Enter' && e.shiftKey && addMessage()
     }
-
+debugger
     return (
         <>
             {messages.map((m) => (

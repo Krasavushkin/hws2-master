@@ -1,14 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
 import s from './Message.module.css'
 import {message0, MessageType} from "../HW1";
+import {text} from "stream/consumers";
 
 // нужно создать правильный тип вместо any
 export type MessagePropsType = {
     message: MessageType
 }
 
+
 // нужно отобразить приходящие данные
 const Message = (props: MessagePropsType) => {
+
     return (
         <div id={'hw1-message-' + props.message.id} className={s.message}>
             <div className={s.imageAndText}>
@@ -21,13 +24,14 @@ const Message = (props: MessagePropsType) => {
                 <div className={s.text}>
                     <div id={'hw1-name-' + props.message.id} className={s.name}>
                         {/*создаёт студент*/}
+
                         {message0.user.name}
 
                         {/**/}
                     </div>
                     <pre id={'hw1-text-' + props.message.id} className={s.messageText}>
                         {/*создаёт студент*/}
-                        {message0.message.text}
+                        {props.message.message.text}
 
                         {/**/}
                     </pre>

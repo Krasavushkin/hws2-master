@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Message, {MessagePropsType} from './message/Message'
 import MessageSender from './message-sender/MessageSender'
 import s2 from '../../s1-main/App.module.css'
 import FriendMessage from './friend-message/FriendMessage'
 import avatar from './avatar.png'
+
 
 
 /*
@@ -17,8 +18,14 @@ import avatar from './avatar.png'
 // нужно создать правильный тип вместо any
 export type MessageType = {
     id: number
-    user: {avatar: string, name: string}
-    message: {text: string, time: string}
+    user: {
+        avatar: string,
+        name: string
+    }
+    message: {
+        text: string,
+        time: string
+    }
 }
 
 // структуру объекта не менять
@@ -29,7 +36,7 @@ export const message0: MessageType = {
         name: 'Ivan',  // можно менять
     },
     message: {
-        text: 'Hello, she did not do anything and rested all day, how are you?', // можно менять
+        text: 'newMessage', // можно менять
         time: '09:01', // можно менять
     },
 }
@@ -43,9 +50,11 @@ export const friendMessage0: MessageType = {
         text: 'Hello, how are yo, what did you do yesterday?', // можно менять
         time: '09:02', // можно менять
     },
+
 }
 
 const HW1 = () => {
+
     return (
         <div id={'hw1'}>
             <div className={s2.hwTitle}>Homework #1</div>
