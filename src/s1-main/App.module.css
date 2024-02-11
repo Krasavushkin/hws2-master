@@ -3,9 +3,19 @@
 }
 
 .hw {
+    margin-top: 40px;
+    margin-left: 70px;
 
 }
 
 .hwTitle {
+    font-family: Montserrat, sans-serif;
+    margin-left: 70px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 27px;
+    text-align: left;
 
+
+    margin-top: 70px;
 }
