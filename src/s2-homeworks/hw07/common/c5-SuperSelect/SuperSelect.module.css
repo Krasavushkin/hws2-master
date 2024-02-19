@@ -1,9 +1,20 @@
 .select {
+    width: 165px;
+    height: 24px;
+    font-family: Montserrat,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: left;
 }
 
 .select:focus {
+
 }
 
 
 .option:hover {
+
+
 }

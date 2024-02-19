@@ -1,2 +1,4 @@
 .container {
+    display: flex;
+    height: 375px;
 }
